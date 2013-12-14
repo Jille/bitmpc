@@ -29,11 +29,11 @@ public class HostItem implements Serializable {
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 2L;
 
 	public String name;
 	
-	public String[] ip;
+	public String host;
 	
 	public String password;
 	
@@ -41,9 +41,9 @@ public class HostItem implements Serializable {
 	
 	public boolean auth;
 	
-	public HostItem(String _name, String[] _ip, int _port, String _password, boolean _auth) {
+	public HostItem(String _name, String _host, int _port, String _password, boolean _auth) {
 		name = _name;
-		ip = _ip;
+		host = _host;
 		port = _port;
 		password = _password;
 		auth = _auth;

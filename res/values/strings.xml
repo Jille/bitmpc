@@ -11,7 +11,7 @@
 	<string name="about_jguerrero">jguerrero@bitendian.com</string>
 	<string name="about_bitendian">bITendian</string>
 	<string name="connection_name">name</string>
-	<string name="connection_ip">host ip</string>
+	<string name="connection_host">hostname/ip</string>
 	<string name="connection_port">host port</string>
 	<string name="connection_auth">use password</string>
 	<string name="connection_password">password</string>

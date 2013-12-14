@@ -118,9 +118,8 @@ public class Connection extends Thread {
 	@Override
 	public void run() {
 		try {
-			String ip = host.ip[0] + "." + host.ip[1] + "." + host.ip[2] + "." + host.ip[3]; 
 			socket = new Socket();
-			socket.connect(new InetSocketAddress(ip, host.port), 5000);
+			socket.connect(new InetSocketAddress(host.host, host.port), 5000);
 			in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 			out = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
 			if (in.readLine().startsWith("OK")) {
