@@ -123,6 +123,9 @@ public class BitMPC extends Activity {
 		case R.id.browsemenu_add:
 			handler.browseLongAdd(((AdapterContextMenuInfo) _item.getMenuInfo()).position);
 			return true;
+		case R.id.browsemenu_add_next:
+			handler.browseLongAddNext(((AdapterContextMenuInfo) _item.getMenuInfo()).position);
+			return true;
 		case R.id.rssmenu_remove:
 			handler.rssRemove(((AdapterContextMenuInfo) _item.getMenuInfo()).position);
 			break;

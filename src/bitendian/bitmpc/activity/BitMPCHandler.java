@@ -428,6 +428,20 @@ public class BitMPCHandler extends Handler {
 		}
 	}
 	
+	void browseLongAddNext(int _position) {
+		BrowseItem item = browseAdapter.getTItem(_position);
+		switch (item.getType()) {
+		case DIRECTORY:
+		case FILE:
+			connection.doAddAt(item.get("file"), currentSong+1);
+			break;
+		case PLAYLIST:
+			// TODO: support adding it at the right position
+			connection.doLoad(item.toString());
+			break;
+		}
+	}
+
 	void browseAdd(int _position) {
 		BrowseItem item = browseAdapter.getTItem(_position); 
 		switch (item.getType()) {

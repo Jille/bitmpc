@@ -224,6 +224,11 @@ public class Connection extends Thread {
 		queue.add(new Command("status ", Response.STATUS)); 		
 	}
 
+	public void doAddAt(String _file, int pos) {
+		queue.add(new Command("addid \"" + _file + "\" "+ pos, Response.ACK));
+		queue.add(new Command("status ", Response.STATUS));
+	}
+
 	public void doPlay(String _file) { 
 		queue.add(new Command("play \"" + _file + "\"", Response.ACK)); 
 		queue.add(new Command("status ", Response.STATUS)); 		

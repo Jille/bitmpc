@@ -2,4 +2,6 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 	<item android:title="@string/browsemenu_add"
 		android:titleCondensed="@string/browsemenu_add" android:id="@+id/browsemenu_add"></item>
+	<item android:title="@string/browsemenu_add_next"
+		android:titleCondensed="@string/browsemenu_add_next" android:id="@+id/browsemenu_add_next"></item>
 </menu>
