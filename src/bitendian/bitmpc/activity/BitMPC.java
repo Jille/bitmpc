@@ -318,6 +318,7 @@ public class BitMPC extends Activity {
 		findViewById(R.id.repeat_icon).setOnClickListener(new OnClickListener() { public void onClick(View v) { handler.repeat(); } });
 		
 		findViewById(R.id.random_icon).setOnClickListener(new OnClickListener() { public void onClick(View v) { handler.random(); } });
+		findViewById(R.id.random_icon).setOnLongClickListener(new OnLongClickListener() { public boolean onLongClick(View v) { handler.shuffle(); return true; } });
 		
 		findViewById(R.id.playlist_current).setOnClickListener(new OnClickListener() { public void onClick(View v) { playlist.setSelection(handler.getPlaylistAdapter().getSelected()); } });
 		

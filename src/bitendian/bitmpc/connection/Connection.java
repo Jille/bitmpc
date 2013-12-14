@@ -262,7 +262,12 @@ public class Connection extends Thread {
 		queue.add(new Command("random " +  (_value ? "1" : "0"), Response.ACK)); 
 		queue.add(new Command("status ", Response.STATUS)); 		
 	}
-	
+
+	public void doShuffle() {
+		queue.add(new Command("shuffle", Response.ACK));
+		queue.add(new Command("status ", Response.STATUS));
+	}
+
 	public void doRepeat(boolean _value) { 
 		queue.add(new Command("repeat " +  (_value ? "1" : "0"), Response.ACK)); 
 		queue.add(new Command("status ", Response.STATUS)); 		

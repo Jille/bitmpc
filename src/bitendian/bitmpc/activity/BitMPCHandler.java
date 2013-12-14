@@ -352,6 +352,8 @@ public class BitMPCHandler extends Handler {
 	
 	void random() { connection.doRandom(!currentRandom); }
 
+	void shuffle() { connection.doShuffle(); }
+
 	void magicButton(StatusIconStatus _current) {
 		switch (_current) {
 		case PLAY:
