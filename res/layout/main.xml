@@ -107,10 +107,10 @@
 			android:layout_height="wrap_content" android:layout_alignParentRight="true">
 			<ImageView android:layout_width="wrap_content"
 				android:layout_height="wrap_content" android:src="@drawable/repeat_selector"
-				android:id="@+id/repeat_icon" android:layout_toLeftOf="@+id/shuffle_icon" />
+				android:id="@+id/repeat_icon" android:layout_toLeftOf="@+id/random_icon" />
 			<ImageView android:layout_width="wrap_content"
-				android:layout_height="wrap_content" android:src="@drawable/shuffle_selector"
-				android:id="@id/shuffle_icon" android:layout_marginLeft="10sp"
+				android:layout_height="wrap_content" android:src="@drawable/random_selector"
+				android:id="@id/random_icon" android:layout_marginLeft="10sp"
 				android:layout_gravity="right" android:layout_alignParentRight="true" />
 		</LinearLayout>
 	</RelativeLayout>

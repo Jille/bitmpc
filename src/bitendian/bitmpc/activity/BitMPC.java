@@ -317,7 +317,7 @@ public class BitMPC extends Activity {
 		// repeat
 		findViewById(R.id.repeat_icon).setOnClickListener(new OnClickListener() { public void onClick(View v) { handler.repeat(); } });
 		
-		findViewById(R.id.shuffle_icon).setOnClickListener(new OnClickListener() { public void onClick(View v) { handler.random(); } });
+		findViewById(R.id.random_icon).setOnClickListener(new OnClickListener() { public void onClick(View v) { handler.random(); } });
 		
 		findViewById(R.id.playlist_current).setOnClickListener(new OnClickListener() { public void onClick(View v) { playlist.setSelection(handler.getPlaylistAdapter().getSelected()); } });
 		
@@ -335,7 +335,7 @@ public class BitMPC extends Activity {
 		
 		image.setOnTouchListener(vibration_listener);
 		findViewById(R.id.repeat_icon).setOnTouchListener(vibration_listener);
-		findViewById(R.id.shuffle_icon).setOnTouchListener(vibration_listener);
+		findViewById(R.id.random_icon).setOnTouchListener(vibration_listener);
 		
 	}
 	
@@ -528,7 +528,7 @@ public class BitMPC extends Activity {
 	}
 
 	void selectRandom(boolean _random) {
-		ImageView image = (ImageView) findViewById(R.id.shuffle_icon);
+		ImageView image = (ImageView) findViewById(R.id.random_icon);
 		image.setSelected(_random);
 	}
 
