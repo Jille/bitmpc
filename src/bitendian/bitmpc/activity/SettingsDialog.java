@@ -30,7 +30,7 @@ import android.view.View;
 import android.view.WindowManager.LayoutParams;
 import android.widget.CheckBox;
 import android.widget.EditText;
-import bitendian.bitmpc.R;
+import nl.vvs_nijmegen.music.bitmpc.R;
 
 /**
  * 

@@ -28,7 +28,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager.LayoutParams;
-import bitendian.bitmpc.R;
+import nl.vvs_nijmegen.music.bitmpc.R;
 
 public class AboutDialog extends Dialog {
 

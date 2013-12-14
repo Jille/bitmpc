@@ -27,7 +27,7 @@ import android.content.DialogInterface;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.EditText;
-import bitendian.bitmpc.R;
+import nl.vvs_nijmegen.music.bitmpc.R;
 import bitendian.bitmpc.activity.BitMPC;
 
 public class PlayURLDialog extends AlertDialog {

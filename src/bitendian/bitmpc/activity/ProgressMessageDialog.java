@@ -23,7 +23,7 @@
 package bitendian.bitmpc.activity;
 
 import android.app.ProgressDialog;
-import bitendian.bitmpc.R;
+import nl.vvs_nijmegen.music.bitmpc.R;
 
 public class ProgressMessageDialog extends ProgressDialog {
 

@@ -35,7 +35,7 @@ import android.widget.ListView;
 import android.widget.ToggleButton;
 import android.widget.AdapterView.AdapterContextMenuInfo;
 import android.widget.AdapterView.OnItemClickListener;
-import bitendian.bitmpc.R;
+import nl.vvs_nijmegen.music.bitmpc.R;
 
 public class HostsDialog extends Dialog {
 

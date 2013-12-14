@@ -24,7 +24,7 @@ package bitendian.bitmpc.activity;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
-import bitendian.bitmpc.R;
+import nl.vvs_nijmegen.music.bitmpc.R;
 import bitendian.bitmpc.activity.BitMPC;
 
 public class MessageDialog extends AlertDialog {

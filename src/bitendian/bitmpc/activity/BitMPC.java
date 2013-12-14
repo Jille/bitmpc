@@ -58,7 +58,7 @@ import android.widget.AdapterView.AdapterContextMenuInfo;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.SeekBar.OnSeekBarChangeListener;
-import bitendian.bitmpc.R;
+import nl.vvs_nijmegen.music.bitmpc.R;
 import bitendian.bitmpc.activity.GestureListView.DragListener;
 import bitendian.bitmpc.activity.GestureListView.DropListener;
 import bitendian.bitmpc.activity.GestureListView.RemoveListener;

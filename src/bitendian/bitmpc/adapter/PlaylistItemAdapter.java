@@ -26,7 +26,7 @@ import android.graphics.Color;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.TextView;
-import bitendian.bitmpc.R;
+import nl.vvs_nijmegen.music.bitmpc.R;
 import bitendian.bitmpc.activity.BitMPC;
 import bitendian.bitmpc.main.PlaylistItem;
 

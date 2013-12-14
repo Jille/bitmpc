@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<string name="app_name">BitMPC</string>
+	<string name="app_name">VvS BitMPC</string>
 	<string name="about_url">http://www.bitendian.com</string>
 	<string name="about_url_app">http://www.bitendian.com/bitmpc</string>
 	<string name="about_version">version: </string>

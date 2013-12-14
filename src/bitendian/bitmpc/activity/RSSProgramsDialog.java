@@ -29,7 +29,7 @@ import android.view.WindowManager.LayoutParams;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.AdapterView.OnItemClickListener;
-import bitendian.bitmpc.R;
+import nl.vvs_nijmegen.music.bitmpc.R;
 import bitendian.bitmpc.adapter.RSSItemAdapter;
 import bitendian.bitmpc.main.RSSItem;
 
