@@ -29,7 +29,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.net.InetSocketAddress;
 import java.net.Socket;
-import java.util.LinkedList;
+import java.util.concurrent.LinkedBlockingQueue;
 
 import android.os.Message;
 import bitendian.bitmpc.activity.BitMPCHandler;
@@ -41,7 +41,7 @@ public class Connection extends Thread {
 	private HostItem host;
 	private Socket socket;
 	private BitMPCHandler handler;
-	private LinkedList<Command> queue = new LinkedList<Command>();
+	private LinkedBlockingQueue<Command> queue = new LinkedBlockingQueue<Command>();
 	private BufferedReader in;
 	private BufferedWriter out;
 		
@@ -135,13 +135,14 @@ public class Connection extends Thread {
 				}
 				handler.sendMessage(Message.obtain(handler, BitMPCHandler.MESSAGE_CONNECTED));
 				while (true) {
-					// esperamos un comando minimizando consumo
-					while (queue.size() == 0) {
-						try { sleep(100); } 
-						catch (InterruptedException _e) { }
-					}
 					// comando actual
-					Command command = queue.remove();
+					Command command = null;
+					do {
+						try {
+							command = queue.take();
+						} catch(InterruptedException e) {
+						}
+					} while(command == null);
 					// preparacion para el resultado
 					prepareResponse(command.response);
 					// envio del comando
