@@ -127,7 +127,11 @@ public class Connection extends Thread {
 				if (host.auth) {
 					out.write("password " + host.password + "\n");
 					out.flush();
-					if (!in.readLine().startsWith("OK")) handler.sendMessage(Message.obtain(handler, BitMPCHandler.MESSAGE_INCORRECT_PASSWORD));
+					if (!in.readLine().startsWith("OK")) {
+						handler.sendMessage(Message.obtain(handler, BitMPCHandler.MESSAGE_INCORRECT_PASSWORD));
+						handler.sendMessage(Message.obtain(handler, BitMPCHandler.MESSAGE_NOT_CONNECTED));
+						return;
+					}
 				}
 				handler.sendMessage(Message.obtain(handler, BitMPCHandler.MESSAGE_CONNECTED));
 				while (true) {
