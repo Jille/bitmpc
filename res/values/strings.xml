@@ -10,6 +10,9 @@
 	<string name="about_email">e-mail: </string>
 	<string name="about_jguerrero">jguerrero@bitendian.com</string>
 	<string name="about_bitendian">bITendian</string>
+	<string name="about_vvs">Modifications made for the Villa van Schaeck</string>
+	<string name="about_vvs_by">by Jille Timmermans</string>
+	<string name="about_vvs_email">tc@vvs-nijmegen.nl</string>
 	<string name="connection_name">name</string>
 	<string name="connection_host">hostname/ip</string>
 	<string name="connection_port">host port</string>
