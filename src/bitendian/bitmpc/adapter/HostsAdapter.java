@@ -109,8 +109,19 @@ public class HostsAdapter extends BitMPCAdapter<HostItem> {
 	protected View getView(int _position, HostItem _item, View _view) {
 		CheckedTextView v = (CheckedTextView) (_view == null ? getContext().getLayoutInflater().inflate(android.R.layout.simple_list_item_single_choice, null) : _view);
 		v.setText(_item.toString());
-		v.setChecked(getTItem(current) == _item);
+		if(current != -1) {
+			v.setChecked(getTItem(current) == _item);
+		}
 		return v;
+	}
+
+	@Override
+	protected void initialize() {
+		addItem(new HostItem("Grote zaal", "music.vvs-nijmegen.nl", 6601, "vvsbitmpc", true));
+		addItem(new HostItem("Kelder", "music.vvs-nijmegen.nl", 6602, "vvsbitmpc", true));
+		addItem(new HostItem("Borrelruimte", "music.vvs-nijmegen.nl", 6603, "vvsbitmpc", true));
+		current = -1;
+		notifyDataSetChanged();
 	}
 
 }

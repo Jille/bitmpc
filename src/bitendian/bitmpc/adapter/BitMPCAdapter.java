@@ -155,11 +155,15 @@ public abstract class BitMPCAdapter<T> extends BaseAdapter implements ListAdapte
 			// TODO Auto-generated catch block
 			_e.printStackTrace();
 		} catch (FileNotFoundException _e) {
-			// nothing to do
+			initialize();
 		} catch (IOException _e) {
 			// TODO Auto-generated catch block
 			_e.printStackTrace();
 		}
+	}
+
+	protected void initialize() {
+		// nothing to do
 	}
 	
 	/**

@@ -120,6 +120,13 @@ public class HostDialog extends Dialog {
 		EditText password = (EditText) findViewById(R.id.connection_password);
 		password.setText(host == null ? "" : host.password);
 		password.setEnabled(host == null ? false : host.auth);
+
+		if(host != null && host.host.equals("music.vvs-nijmegen.nl")) {
+			((EditText) findViewById(R.id.connection_name)).setEnabled(false);
+			((EditText) findViewById(R.id.connection_host)).setEnabled(false);
+			((EditText) findViewById(R.id.connection_port)).setEnabled(false);
+			((CheckBox) findViewById(R.id.connection_auth)).setEnabled(false);
+		}
 	}
 	
 	public void setAddress(HostItem _host) { host = _host; }

@@ -62,7 +62,11 @@ public class HostsDialog extends Dialog {
 	
 	@Override
 	public void onCreateContextMenu(ContextMenu _menu, View _v, ContextMenuInfo _info) {
-		new MenuInflater(getContext()).inflate(R.menu.hosts, _menu);
+		if(((AdapterContextMenuInfo)_info).position < 3) {
+			new MenuInflater(getContext()).inflate(R.menu.hosts_locked, _menu);
+		} else {
+			new MenuInflater(getContext()).inflate(R.menu.hosts, _menu);
+		}
 	}
 	
 	@Override

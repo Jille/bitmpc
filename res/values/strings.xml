@@ -53,5 +53,5 @@
 	<string name="input_url">Add URL:</string>
 	<string name="url_error">Bad URL format</string>
 	<string name="unknown_artist">Unknown artist</string>
-	<string name="no_host_error">To create a host click Menu > Hosts</string>
+	<string name="no_host_error">To choose a host click Menu > Hosts</string>
 </resources>
