@@ -520,6 +520,8 @@ public class BitMPCHandler extends Handler {
 
 	void updateHost(HostItem _host) { hostsAdapter.save(); }
 
+	void editCurrentHost() { context.editHost(hostsAdapter.getTItem(hostsAdapter.getCurrentPosition())); }
+
 	void editHost(int _position) { context.editHost(hostsAdapter.getTItem(_position)); }
 
 	void deleteHost(int _position) { 

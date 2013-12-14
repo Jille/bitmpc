@@ -26,6 +26,7 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.util.DisplayMetrics;
@@ -484,6 +485,16 @@ public class BitMPC extends Activity {
 	void showPasswordErrorDialog() {
 		MessageDialog dialog = new MessageDialog(this);
 		dialog.setMessage(getString(R.string.connection_password_error));
+		dialog.setButton(getString(R.string.change_password), new DialogInterface.OnClickListener() {
+			public void onClick(DialogInterface dialog, int id) {
+				// User wants to change the password
+				handler.editCurrentHost();
+			}
+		});
+		dialog.setButton2(getString(R.string.dismiss), new DialogInterface.OnClickListener() {
+			public void onClick(DialogInterface dialog, int id) {
+			}
+		});
 		dialog.show();
 	}
 

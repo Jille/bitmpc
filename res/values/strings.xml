@@ -16,6 +16,8 @@
 	<string name="connection_auth">use password</string>
 	<string name="connection_password">password</string>
 	<string name="connection_password_error">Incorrect password!</string>
+	<string name="dismiss">Dismiss</string>
+	<string name="change_password">Change password</string>
 	<string name="connection_rss_error">Can\'t fetch rss info!</string>
 	<string name="settings_vibration">vibration</string>
 	<string name="settings_playonadd">play on add</string>
