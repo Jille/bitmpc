@@ -97,6 +97,26 @@ public class BitMPC extends Activity {
 			return false;
 		}
 	};
+
+	@Override
+	public boolean dispatchKeyEvent(KeyEvent event) {
+		int action = event.getAction();
+		int keyCode = event.getKeyCode();
+		switch (keyCode) {
+		case KeyEvent.KEYCODE_VOLUME_UP:
+			if (action == KeyEvent.ACTION_DOWN) {
+				handler.setRelativeVolume(4);
+			}
+			return true;
+		case KeyEvent.KEYCODE_VOLUME_DOWN:
+			if (action == KeyEvent.ACTION_DOWN) {
+				handler.setRelativeVolume(-4);
+			}
+			return true;
+		default:
+			return super.dispatchKeyEvent(event);
+		}
+	}
 	
 	public boolean onOptionsItemSelected(MenuItem _item) {
 		switch (_item.getItemId()) {

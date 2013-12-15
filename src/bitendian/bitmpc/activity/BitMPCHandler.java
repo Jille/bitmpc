@@ -25,6 +25,7 @@ package bitendian.bitmpc.activity;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Stack;
+import java.lang.Math;
 
 import android.os.Handler;
 import android.os.Message;
@@ -345,6 +346,8 @@ public class BitMPCHandler extends Handler {
 	void stop() { connection.doStop(); }
 	
 	void setVolume(int _volume) { connection.doVolume(_volume); }
+
+	void setRelativeVolume(int _volume) { setVolume(Math.max(0, Math.min(100, currentVolume + _volume))); }
 	
 	void seek(int _position) { connection.doSeek(currentSong, _position); }
 
