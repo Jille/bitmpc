@@ -275,13 +275,11 @@ public class BitMPCHandler extends Handler {
 			if (size != playlistAdapter.getCount()) playlistAdapter.head(size);
 			playlistAdapter.notifyDataSetChanged();
 			updating = false;
-			if (context.getStatusIconValue() == StatusIconStatus.STOP || context.getStatusIconValue() == StatusIconStatus.PAUSE) {
-				if (playlistAdapter.getSelected() != -1 && playlistAdapter.getSelected() < playlistAdapter.getCount()) {
-					PlaylistItem item = (PlaylistItem) playlistAdapter.getItem(playlistAdapter.getSelected());
-					if (Integer.parseInt(item.get("Pos")) == currentSong) context.setCurrentText(item.toString());
-				} else {
-					context.setCurrentText("");
-				}
+			if (playlistAdapter.getSelected() != -1 && playlistAdapter.getSelected() < playlistAdapter.getCount()) {
+				PlaylistItem item = (PlaylistItem) playlistAdapter.getItem(playlistAdapter.getSelected());
+				if (Integer.parseInt(item.get("Pos")) == currentSong) context.setCurrentText(item.toString());
+			} else {
+				context.setCurrentText("");
 			}
 		}
 		if ("repeat".equals(_key)) {
