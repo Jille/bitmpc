@@ -147,6 +147,12 @@ public class BitMPC extends Activity {
 		case R.id.browsemenu_add_next:
 			handler.browseLongAddNext(((AdapterContextMenuInfo) _item.getMenuInfo()).position);
 			return true;
+		case R.id.searchmenu_add:
+			handler.searchAdd(((AdapterContextMenuInfo) _item.getMenuInfo()).position);
+			return true;
+		case R.id.searchmenu_add_next:
+			handler.searchAddNext(((AdapterContextMenuInfo) _item.getMenuInfo()).position);
+			return true;
 		case R.id.rssmenu_remove:
 			handler.rssRemove(((AdapterContextMenuInfo) _item.getMenuInfo()).position);
 			break;
@@ -439,10 +445,19 @@ public class BitMPC extends Activity {
 
 	@Override
 	public void onCreateContextMenu(ContextMenu _menu, View _v, ContextMenuInfo _info) {
-		System.out.println("EL ID DEL QUE VIENE: " + _v.getId());
-		if (_v.getId() == R.id.browse_results) new MenuInflater(this).inflate(R.menu.browse, _menu);
-		if (_v == playlist) new MenuInflater(this).inflate(R.menu.playlist, _menu);
-		if (_v.getId() == R.id.rss_sites) new MenuInflater(this).inflate(R.menu.rss, _menu);
+		switch(_v.getId()) {
+			case R.id.browse_results:
+				new MenuInflater(this).inflate(R.menu.browse, _menu);
+				break;
+			case R.id.search_results:
+				new MenuInflater(this).inflate(R.menu.search, _menu);
+				break;
+			case R.id.rss_sites:
+				new MenuInflater(this).inflate(R.menu.rss, _menu);
+				break;
+			default:
+				if (_v == playlist) new MenuInflater(this).inflate(R.menu.playlist, _menu);
+		}
 	}
 		
 	@Override

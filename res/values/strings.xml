@@ -33,6 +33,8 @@
 	<string name="browse_back">..</string>
 	<string name="browsemenu_add">Add</string>
 	<string name="browsemenu_add_next">Add as next</string>
+	<string name="searchmenu_add">Add</string>
+	<string name="searchmenu_add_next">Add as next</string>
 	<string name="rssmenu_remove">Remove</string>
 	<string name="playlistmenu_remove">Remove</string>
 	<string name="playlistmenu_clear">Clear</string>

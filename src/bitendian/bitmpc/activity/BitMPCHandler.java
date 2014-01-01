@@ -507,6 +507,10 @@ public class BitMPCHandler extends Handler {
 		connection.doAdd(searchAdapter.getTItem(_position).get("file"));
 		if (context.getPreferences().getBoolean(SettingsDialog.SETTING_PLAYONADD, false)) connection.doPlay();
 	}
+
+	void searchAddNext(int _position) {
+		connection.doAddAt(searchAdapter.getTItem(_position).get("file"), currentSong+1);
+	}
 	
 	/*** HOSTS ***/
 	

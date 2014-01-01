@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+	<item android:title="@string/searchmenu_add"
+		android:titleCondensed="@string/searchmenu_add" android:id="@+id/searchmenu_add"></item>
+	<item android:title="@string/searchmenu_add_next"
+		android:titleCondensed="@string/searchmenu_add_next" android:id="@+id/searchmenu_add_next"></item>
+</menu>
