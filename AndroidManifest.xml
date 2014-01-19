@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-	package="nl.vvs_nijmegen.music.bitmpc" android:versionCode="1" android:versionName="1.0">
+	package="nl.vvs_nijmegen.music.bitmpc" android:versionCode="3" android:versionName="2.1">
 	<application android:label="@string/app_name"
 	android:theme="@android:style/Theme.NoTitleBar" android:hasCode="true" android:icon="@drawable/icon">
 		<activity android:name="bitendian.bitmpc.activity.BitMPC"
